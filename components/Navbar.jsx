@@ -10,7 +10,7 @@ const Navbar=()=>(
     <Flex p="5" borderBottom="1px" borderColor="gray.100">
 
         <Box fontSize="6xl" color="black.400" fontWeight="bold">
-            <Link href="/" paddingLeft="0" > Royal Properties</Link>        
+            <Link href="/" paddingLeft="0" >ʀᴏʏᴀʟ ᴘʀᴏᴘᴇʀᴛɪᴇꜱ 🏛️</Link>        
          </Box>
          <Spacer/>
          <Box>

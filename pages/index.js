@@ -1,19 +1,23 @@
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
+
 import {Flex,Box,Text,Button} from '@chakra-ui/react';
 
 import {fetchApi} from '../utils/fetchApi'
 
 import Property from '../components/Property';
 
+
+
 //NEW BANNER !
 //NEW BANNER !
 //NEW BANNER !
 
  const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, linkName, imageUrl }) => (
+  <Flex flexWrap='wrap' justifyContent='center' alignItems='center' m='10'>
   <Box paddingTop='0' paddingBottom='10'>
-    <Image src={imageUrl} width="5000px" height="2700px" alt="banner" /> 
+    <Image src={imageUrl} width="1200px" height="600px" alt="banner" /> 
     <Box p='5'>
       <Text color='gray.500' fontSize='lg' fontWeight='medium'>{purpose}</Text>
       <Text fontSize='5xl' fontWeight='bold'>{title1} {title2}</Text>
@@ -23,6 +27,7 @@ import Property from '../components/Property';
       </Button>
     </Box>
   </Box>
+  </Flex>
 );
 
 // Testing Prev Code is Commented 
@@ -48,7 +53,14 @@ export default function  Home({propertiesForSale,propertiesForRent} ) {
   
   return(
   <div className='home'>
-  
+  <div className='top_banner'>
+      <div className='top_text'>
+
+        <h2>Find your dream home</h2>
+        <h3>Move to What Moves You...</h3>
+
+      </div>
+  </div>
   <Box>
     <Banner
       purpose='RENT A HOME'
@@ -60,7 +72,7 @@ export default function  Home({propertiesForSale,propertiesForRent} ) {
       linkName='/search?purpose=for-rent'
       imageUrl='https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4'
     />
-    <Flex flexWrap='wrap'>
+    <Flex flexWrap='wrap' justifyContent='center' alignItems='center' m='10'>
       {propertiesForRent.map((property) => <Property property={property} key={property.id} />)}
     </Flex>
     <Banner
@@ -73,7 +85,7 @@ export default function  Home({propertiesForSale,propertiesForRent} ) {
       linkName='/search?purpose=for-sale'
       imageUrl='https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008'
     />
-    <Flex flexWrap='wrap'>
+    <Flex flexWrap='wrap' justifyContent='center' alignItems='center' m='10'>
       {propertiesForSale.map((property) => <Property property={property} key={property.id} />)}
     </Flex>
   </Box>

@@ -8,7 +8,33 @@ body {
   
     
 }
-
+.top_banner{
+  width: 100vw;
+  height: 90vh;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 5%;
+  background-image: linear-gradient(rgba(3, 0, 0, 0.428),rgba(15, 15, 15, 0.484)), url('https://cdn-www.terminix.com/-/media/Feature/Terminix/Articles/office-building-exterior.jpg?rev=d7a90e3e838642c3a6fcb0f75403777b');
+}
+.top_text{
+  background-color: rgba(0, 0, 0, 0.32);
+  padding: 3%;
+  
+  position:absolute;
+  top: 6%;
+  left:5%;
+}
+.top_text h2{
+  color: white;
+  font-size: 2vw;
+  font-family: "Lucida Handwriting", "Courier New", monospace;
+}
+.top_text h3{
+  color: white;
+  font-size: 4vw;
+  font-family: "Lucida Handwriting", "Courier New", monospace;
+}
 a {
   color: inherit;
   text-decoration: none;
